@@ -30,7 +30,7 @@ public String classifyBook(String bookId) {
         return "Computer Science";
     } 
     else if (id.startsWith("SE")) {
-        return "Software Engineering";
+        return "Software engineering";
     } 
     else if (id.startsWith("CE")) {
         return "Computer Engineering";
