@@ -1,11 +1,16 @@
 
 package com.hnof.library;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 public class SimpleBookService implements BookService {
+    private static final Logger logger = 
+LoggerFactory.getLogger(SimpleBookService.class);
 private boolean bookAvailable;
 private int pages;
 private String bookId;
 
 public SimpleBookService(boolean bookAvailable, int pages, String bookId) {
+    logger.info("Initializing SimpleBookService with book ID: {}", bookId);
     this.bookAvailable = bookAvailable;
     this.pages = pages;
     this.bookId = bookId;
@@ -13,6 +18,7 @@ public SimpleBookService(boolean bookAvailable, int pages, String bookId) {
 
 @Override
 public boolean isBookAvailable(String bookId) {
+    logger.info("Checking availability for book ID: {}", bookId);
     return bookAvailable;
 }
 
